@@ -37,7 +37,7 @@ console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 
 
 const gameName = new String('hitesh-')
-// thsi is a way to create the string as a object in javascript and their will be key-value 
+// this is a way to create the string as a object in javascript and their will be key-value 
 // pairs which area as 1:h 2:i 3:t as like this are not index but the key value pairs 
 
 // we can access them using follwing syntax
@@ -63,7 +63,7 @@ console.log(newStringOne.trim()); // will remove all the spaces before and after
 
 const url = "https://hitesh.com/hitesh%20choudhary"
 console.log(url.replace('%20', '-')) // will replace %20 in above string with -
-console.log(url.includes('sundar'))
+console.log(url.includes('sundar')) // if includes then true else false
 
 let splitVariable = "jaydeep-Chaudari-101-205A026"
 console.log(splitVariable.split('-'));
