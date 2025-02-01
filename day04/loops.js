@@ -14,7 +14,7 @@ for (let num = 1; num <= 20 ; num++){
 console.log(`sum = ${sum}`)
 
 // +++++++++++++++++++++ while loop ++++++++++++++++++|
-
+{
 console.log("this is while loop")
 
 let i = 1;
@@ -22,7 +22,7 @@ while(i <= 5){
     console.log("jaydeep chaudhari");
     i++;
 }
-
+}
 // ++++++++++++++++++ do while loop +++++++++++++++++
 
 console.log("we are  learning do -while loop ");
