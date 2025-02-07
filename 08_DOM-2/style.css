@@ -1,0 +1,11 @@
+*{
+    background-color:beige;
+    box-sizing: border-box;
+}
+h1{
+    color: blueviolet;
+    background-color: aquamarine;
+}
+button{
+    background-color: yellow;
+}

@@ -24,7 +24,7 @@ const arrowFunction2 = (para1,para2) => para1 + para2
 
 //const arrowFunction2 = (para1,para2) => ( para1 + para2 ) // this syntax will also do same work as above
 
-// this wheneever we create the block{} for execution we need to retrun it 
+// this whenever we create the block{} for execution we need to retrun it 
 // for single line we dont
 
 // to return the object we need to wrap it in curly braces{}
