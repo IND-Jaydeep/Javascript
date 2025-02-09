@@ -1,0 +1,18 @@
+*{
+    background-color:rgb(43, 40, 40);
+    color:azure
+}
+button{
+    background-color: aqua;
+    color: blue;
+}
+
+div{
+    height :100px;
+    width :100px;
+    background-color: aquamarine;
+    color: blueviolet;
+    text-align: center;
+    border: 1px , solid , black ;
+
+}
