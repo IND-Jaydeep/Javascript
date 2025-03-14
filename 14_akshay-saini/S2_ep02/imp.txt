@@ -1,0 +1,63 @@
+If you have a .then() block after a .catch() block, the behavior depends on whether the .catch() itself throws an error or returns a value. Let's explore both cases.
+
+1️⃣ Case 1: .catch() Handles the Error and Returns a Value
+If .catch() returns a value, then the .then() block after it will execute with that returned value.
+
+let p = new Promise((resolve, reject) => {
+    reject("❌ Error occurred!");
+})
+.catch(error => {
+    console.log("Caught:", error);
+    return "Recovered from error"; // ✅ Returning a value
+})
+.then(result => {
+    console.log("Then block:", result); // ✅ This will execute
+});
+
+🔹 Output:
+
+Caught: ❌ Error occurred!
+Then block: Recovered from error
+✔ The error was caught and handled in .catch(), so the .then() after it runs successfully.
+
+2️⃣ Case 2: .catch() Throws Another Error
+If .catch() throws another error, the .then() block after it won't execute. Instead, you'd need another .catch() to handle it.
+
+let p = new Promise((resolve, reject) => {
+    reject("❌ Initial error!");
+})
+.catch(error => {
+    console.log("Caught:", error);
+    throw "🔥 New error from catch"; // ❌ Throwing a new error
+})
+.then(result => {
+    console.log("Then block:", result); // ❌ Won't execute
+})
+.catch(error => {
+    console.log("Final catch:", error); // ✅ This will execute
+});
+
+
+
+🔹 Output:
+
+Caught: ❌ Initial error!
+Final catch: 🔥 New error from catch
+✔ Since .catch() threw another error, the next .then() never executes, and instead, a second .catch() handles it.
+
+3️⃣ Case 3: No .catch(), but .then() Handles Rejections
+You can also handle errors inside .then() itself, using the second argument:
+
+
+let p = new Promise((resolve, reject) => {
+    reject("❌ Error occurred!");
+})
+.then(
+    result => console.log("Success:", result), 
+    error => console.log("Handled in then:", error) // ✅ Handling error inside then
+);
+
+🔹 Output:
+
+Handled in then: ❌ Error occurred!
+✔ This works, but using .catch() is generally preferred for error handling.

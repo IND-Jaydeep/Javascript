@@ -9,6 +9,7 @@ delete JSuser.year
 console.log(JSuser) //{ name: 'jaydeep', stream: 'comp' }
 
 // object destructring
+
 // to access "comp" every time i have to use JSuser.stream
 // instead we can do
 
